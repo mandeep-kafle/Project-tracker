@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <a href="/" class="nav-brand text-dark">Project Management System </a>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex-justify-between">
+                <div class="filter">
+                    <a href="/"><i class="fas fa-backward"></i></i>All Projects</a>
+                </div>
+            </div>
+
+            <div class="form-title text-center"></div>
+            <h2 class="text=dark">New Project</h2>
+            <span class="text-light"> Use the below form to create new project</span>
+
+            <!-- form handling -->
+            <form method="POST" id="update_user">
+                <div class="new_project">
+
+
+                    <div class="form-group">
+                        <label for="date" class="text-light">Date</label>
+                        <input type="hidden" name="id" value="">
+                        <input type="date" name="date" value="" placeholder="Enter Date">
+
+
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="text-light">Name</label>
+                        <input type="text" name="name" value="" placeholder="Enter Project">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="repo" class="text-light">Repository</label>
+                        <input type="text" name="repo" value="" placeholder="Enter repo link">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="weburl" class="text-light">Web Url</label>
+                        <input type="text" name="weburl" value="" placeholder="Enter web url">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="issues" class="text-light">Issues</label>
+                        <input type="number" name="issues" value="" placeholder="Enter no of current issues">
+                    </div>
+                    <div class="form-group">
+                        <label for="status" class="text-light">Status</label>
+                        <div class="radio inline">
+                            <input type="radio" name="status" value="active">
+                            <label for="active" class="text-light">Active</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" name="status" value="inactive">
+                            <label for="unactive" class="text-light">Inactive</label>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="description" class="text-light">Description</label>
+                        <input type="text" name="descripton" value="" placeholder="Description">
+                    </div>
+
+                    <div class="form-group">
+
+                        <button type="submit" class="btn text-dark-update"> Save </button>
+                    </div>
+
+
+                </div>
+            </form>
+
+        </div>
+    </main>
+</body>
+
+</html>
