@@ -26,7 +26,8 @@ exports.create=(req,res)=>{
     project
     .save(project)
     .then(data=>{
-        res.send(data)
+        //res.send(data)
+        res.redirect("/")
     })
 
     .catch(err=>{

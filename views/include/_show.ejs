@@ -1,19 +1,26 @@
+<% for(var i=0;i<projects.length;i++){  %>
 <tr>
-    <td>1</td>
-    <td>22/2/2020</td>
-    <td>some </td>
-    <td>https://github.com</td>
-    <td>https://github.com</td>
-    <td>dep</td>
-    <td>2</td>
-    <td>
-        <a href="/update_project" class="btn border-shadow update">
-            <span class="text gradient"><i class="fas fa-pencil-alt"></i></span>
-        </a>
+    <td> <%= i+1%> </td>
+    <td> <%= projects[i].date %></td>
+    <td><%= projects[i].name %> </td>
+    <td> <%= projects[i].repo %> </td>
+    <td><%= projects[i].weburl %></td>
 
-        <a class="btn border-shadow update">
+    <% if(projects[i].status === 'active') {%><td>active</td>
+    <%}else{%> <td> inactive</td> <%}%>
+    
+    <td><%= projects[i].issues %></td>
+
+    <td>
+        <a href="/update_project?id=<%= projects[i]._id%>" class="btn border-shadow update">
+            <span class="text gradient"><i class="far fa-eye"></i></i></span>
+        </a>
+    </td>
+    <td>
+        <a class="btn border-shadow delete" data-id=<%= projects[i]._id%>>
             <span class="text gradient"><i class="fas fa-times"></i></span>
         </a>
 
     </td>
 </tr>
+<% }%>

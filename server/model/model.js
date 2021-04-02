@@ -1,15 +1,17 @@
 const mongoose=require('mongoose');
-
+var a;
 var schema=new mongoose.Schema({
     date:{
-        type:Date,
-        default:Date.now,
-        required:true
+        type:String,
+        a:Date.now.toString(),
+        default:a,
+       
     },
 
     name:{
         type:String,
         required:true
+        
     },
     repo:{
         type:String,
@@ -23,10 +25,11 @@ var schema=new mongoose.Schema({
     },
     issues:{
         type:Number,
-        required:true
+        required:false
     },
     status:{
-        type:Boolean
+        type:String,
+        default:"active"
     },
 
     description:{

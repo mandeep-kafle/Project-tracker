@@ -18,45 +18,46 @@
 
                 <div class="form-group">
                     <label for="date" class="text-light">Date</label>
-                    <input type="hidden" name="id" value="">
-                    <input type="date" name="date" value="" placeholder="Enter Date">
+                    <input type="hidden" name="id" value="<%=project._id%>">
+                    <input type="date" name="date" value="<%=project.date%>" placeholder="Enter Date">
 
 
                 </div>
                 <div class="form-group">
                     <label for="name" class="text-light">Name</label>
-                    <input type="text" name="name" value="" placeholder="Enter Project">
+                    <input type="text" name="name" value="<%=project.name%>" placeholder="Enter Project">
                 </div>
 
                 <div class="form-group">
                     <label for="repo" class="text-light">Repository</label>
-                    <input type="text" name="repo" value="" placeholder="Enter repo link">
+                    <input type="text" name="repo" value="<%=project.repo%>" placeholder="Enter repo link">
                 </div>
 
                 <div class="form-group">
                     <label for="weburl" class="text-light">Web Url</label>
-                    <input type="text" name="weburl" value="" placeholder="Enter web url">
+                    <input type="text" name="weburl" value="<%=project.weburl%>" placeholder="Enter web url">
 
                 </div>
                 <div class="form-group">
                     <label for="issues" class="text-light">Issues</label>
-                    <input type="number" name="issues" value="" placeholder="Enter no of current issues">
+                    <input type="number" name="issues" value="<%=project.issues%>"
+                        placeholder="Enter no of current issues">
                 </div>
                 <div class="form-group">
                     <label for="status" class="text-light">Status</label>
                     <div class="radio inline">
-                        <input type="radio" name="status" value="active">
+                        <input type="radio" name="status" value="<%=project.status=='active'?'checked':''%>">
                         <label for="active" class="text-light">Active</label>
                     </div>
                     <div class="radio inline">
-                        <input type="radio" name="status" value="inactive">
+                        <input type="radio" name="status" value="<%=project.status%>">
                         <label for="unactive" class="text-light">Inactive</label>
                     </div>
 
                 </div>
                 <div class="form-group">
                     <label for="description" class="text-light">Description</label>
-                    <input type="text" name="descripton" value="" placeholder="Description">
+                    <input type="text" name="descripton" value="<%=project.description%>" placeholder="Description">
                 </div>
 
                 <div class="form-group">
