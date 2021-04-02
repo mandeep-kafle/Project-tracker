@@ -40,21 +40,6 @@ app.use('/js',express.static(path.resolve(__dirname,"assets/js")));
 
 
 
-
-
-
-// app.get('/',(req,res)=>{
-//     res.render('index');
-// })
-// app.get('/add_project',(req,res)=>{
-//     res.render('add_project');
-// })
-// app.get('/update_project',(req,res)=>{
-//     res.render('update_project');
-// })
-
-// Routes
-
 app.use('/',require('./server/routes/router'));
 
 app.listen(PORT,()=>{console.log(`server running on http://localhost:${PORT}`)});
